@@ -1,0 +1,32 @@
+{
+  "profiles": [
+    {
+      "id": "uq2e",
+      "name": "Alice",
+      "role": "admin",
+      "age": 32,
+      "email": "alice@alice.com",
+      "isActive": true,
+      "country": "USA",
+      "experience": "Senior"
+    },
+    {
+      "id": "ed6f",
+      "name": "Meu nome",
+      "role": "admin",
+      "age": 29
+    },
+    {
+      "id": "47fb",
+      "name": "Outro nome",
+      "role": "dba",
+      "age": 10
+    },
+    {
+      "id": "ce7a",
+      "name": "Lucas",
+      "role": "developer",
+      "age": 10
+    }
+  ]
+}

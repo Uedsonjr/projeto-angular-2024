@@ -1,0 +1,30 @@
+<div class="container">
+    <h1 class="mt-2">Pessoas</h1>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Perfil</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let profile of profiles">
+            <th scope="row">{{ profile.id }}</th>
+            <td>{{ profile.name }}</td>
+            <td>{{ profile.role }}</td>
+            <td>{{ profile.age }}</td>
+            <td>
+                <a class="btn btn-primary btn-sm" routerLink="/profile/edit/{{profile.id}}">Editar</a>
+                
+            </td>
+          </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-dark" routerLink="/profile/create">Cadastrar</a>
+
+</div>
