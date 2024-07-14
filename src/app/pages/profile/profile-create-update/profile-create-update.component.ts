@@ -15,18 +15,20 @@ export class ProfileCreateUpdateComponent {
   
   profileForm = new FormGroup({
     name: new FormControl('', Validators.required),
+    id: new FormControl('', Validators.required),
     role: new FormControl('', Validators.required),
     age: new FormControl(0, [Validators.required, Validators.min(0)])
-  })
+    
+  });
 
   onSubmit() {
     const profile = this.profileForm.value;
     console.log(profile)
-    this.profileService.cadastrar(profile).subscribe(result => {
+    this.profileService.cadastrarPerfil(this.profileForm).subscribe(result => {
       console.log(result)
       Swal.fire({
-        title: 'Pessoa cadastrada com sucesso!',
-        text: 'PARABENS CHAMPS!!',
+        title: 'Cadastro realizado com sucesso!',
+        text: 'Pessoa inserida ao banco.',
         icon: 'success',
       })
       this.router.navigateByUrl('/profile')

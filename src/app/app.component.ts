@@ -7,7 +7,7 @@ import { MenuItem } from './interfaces/menu-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'treinamento-angular-junho-2024';
+  title = 'projeto-angular-2024';
   
   items: MenuItem[] = [
     {

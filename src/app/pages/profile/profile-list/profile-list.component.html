@@ -13,11 +13,14 @@
         </thead>
         <tbody>
           <tr *ngFor="let profile of profiles">
-            <th scope="row">{{ profile.id }}</th>
-            <td>{{ profile.name }}</td>
-            <td>{{ profile.role }}</td>
-            <td>{{ profile.age }}</td>
-            <td>
+            <th scope="row">{{profile.id}}</th>
+            <td>{{profile.name}}</td>
+            <td>{{profile.role}}</td>
+            <td>{{profile.age}}</td>
+            <td>{{profile.email}}</td>
+            <td>{{profile.isActive}}</td>
+            <td>{{profile.country}}</td>
+            <td>{{profile.experience}}</td>
                 <a class="btn btn-primary btn-sm" routerLink="/profile/edit/{{profile.id}}">Editar</a>
                 
             </td>

@@ -1,6 +1,17 @@
 {
   "profiles": [
     {
+      "id": "2a02",
+      "name": "Uedson",
+      "role": "Dev",
+      "age": 21,
+      "email": "uedsonjr159@gmail.com",
+      "isActive": true,
+      "country": "Brasil",
+      "experience": "Junior"
+
+    },
+    {
       "id": "uq2e",
       "name": "Alice",
       "role": "admin",
@@ -11,22 +22,14 @@
       "experience": "Senior"
     },
     {
-      "id": "ed6f",
-      "name": "Meu nome",
-      "role": "admin",
-      "age": 29
-    },
-    {
-      "id": "47fb",
-      "name": "Outro nome",
-      "role": "dba",
-      "age": 10
-    },
-    {
-      "id": "ce7a",
-      "name": "Lucas",
-      "role": "developer",
-      "age": 10
+      "id": "03q6",
+      "name": "olivia",
+      "role": "UX",
+      "age": 22,
+      "email": "olivia@clara.com",
+      "isActive": false,
+      "country": "EUA",
+      "experience": "Senior"
     }
   ]
 }
