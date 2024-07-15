@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { TipoPerfil } from '../interfaces/tipo.perfil';
+import { profileForm } from '../interfaces/ProfileForm';
+import { gerarIdAleatorio } from '../validates/generateID';
+
 
 
 @Injectable({
@@ -15,17 +17,22 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
 
-  buscarTodos(): Observable<TipoPerfil[]> {
-    return this.http.get<TipoPerfil[]>(this.api);
+  buscarTodos(): Observable<profileForm[]> {
+    return this.http.get<profileForm[]>(this.api);
   }
-  cadastrarPerfil(newProfile: TipoPerfil): Observable<TipoPerfil> {
-    return this.http.post<TipoPerfil>(this.api, newProfile);
+  buscarPerfilPorId(profileId: string): Observable<profileForm> {
+    return this.http.get<profileForm>(`${this.api}${profileId}`);
   }
-  editarPerfil(updateProfile: TipoPerfil): Observable<TipoPerfil> {
-    return this.http.put<TipoPerfil>(`${this.api}${updateProfile.id}`, updateProfile);
+  cadastrarPerfil(newProfile: profileForm): Observable<profileForm> {
+    let {id} = newProfile;
+    id = gerarIdAleatorio();
+    return this.http.post<profileForm>(this.api, newProfile);
   }
-  deletarProfile(profileId: string): Observable<TipoPerfil> {
-    return this.http.delete<TipoPerfil>(`${this.api}${profileId}`);
+  editarPerfil(updateProfile: profileForm): Observable<profileForm> {
+    return this.http.put<profileForm>(`${this.api}/${updateProfile.id}`, updateProfile);
+  }
+  deletarProfile(profileId: string): Observable<profileForm> {
+    return this.http.delete<profileForm>(`${this.api}/${profileId}`);
   }
 }
 

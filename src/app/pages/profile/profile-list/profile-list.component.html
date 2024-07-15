@@ -21,7 +21,18 @@
             <td>{{profile.isActive}}</td>
             <td>{{profile.country}}</td>
             <td>{{profile.experience}}</td>
-                <a class="btn btn-primary btn-sm" routerLink="/profile/edit/{{profile.id}}">Editar</a>
+                <a class="btn btn-primary btn-sm" routerLink="/profile/edit/" [queryParams]="{
+                    id: profile.id, 
+                    name: profile.name, 
+                    age: profile.age, 
+                    role: profile.role, 
+                    email: profile.email, 
+                    country: profile.country, 
+                    experience: profile.experience,
+                    isUpdate: profile.isUpdate,
+                  }">Editar</a>
+                <a (click)="deleteProfile(profile.id)" class="btn btn-danger">Delete</a>
+
           </tr>
         </tbody>
     </table>

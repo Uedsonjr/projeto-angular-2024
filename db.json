@@ -1,25 +1,15 @@
 {
   "profiles": [
     {
-      "id": "2a02",
-      "name": "Uedson",
-      "role": "Dev",
-      "age": 21,
-      "email": "uedsonjr159@gmail.com",
-      "isActive": true,
-      "country": "Brasil",
-      "experience": "Junior"
-
-    },
-    {
+      "name": "Aliceeee",
       "id": "uq2e",
-      "name": "Alice",
       "role": "admin",
-      "age": 32,
+      "age": "32",
       "email": "alice@alice.com",
-      "isActive": true,
+      "isActive": false,
       "country": "USA",
-      "experience": "Senior"
+      "experience": "Senior",
+      "isUpdate": "true"
     },
     {
       "id": "03q6",
@@ -29,7 +19,17 @@
       "email": "olivia@clara.com",
       "isActive": false,
       "country": "EUA",
-      "experience": "Senior"
+      "experience": "Pleno"
+    },
+    {
+      "id": "53e9",
+      "name": "Uedson",
+      "role": "Developer",
+      "age": 21,
+      "email": "uedsonjunior159@hotmail.com",
+      "isActive": true,
+      "country": "Brasil",
+      "experience": "Junior"
     }
   ]
 }

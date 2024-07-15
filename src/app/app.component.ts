@@ -19,8 +19,4 @@ export class AppComponent {
       'url': '/profile',
     },
   ]
-
-  exibirAlerta(has: string) {
-    alert(`O palmeiras ${has} mundial`);
-  }
 }

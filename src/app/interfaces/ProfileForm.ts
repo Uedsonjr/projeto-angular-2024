@@ -1,4 +1,4 @@
-export interface TipoPerfil {
+export interface profileForm {
     id: string;
     name: string;
     role: string;
@@ -7,5 +7,6 @@ export interface TipoPerfil {
     isActive?: boolean;
     country?: string;
     experience?: string;
+    isUpdate?: boolean;
   }
   
